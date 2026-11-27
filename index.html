@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Margin &amp; ROAS Kit</title>
+<meta name="description" content="Free e-commerce profit, margin and break-even ROAS calculator for Shopify, Amazon, Etsy, SmartStore and DTC sellers. Runs in your browser.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">Margin &amp; ROAS Kit</div>
+  <div class="top-actions">
+    <select id="currency" aria-label="Currency">
+      <option value="USD">USD $</option><option value="KRW">KRW ₩</option><option value="EUR">EUR €</option>
+      <option value="GBP">GBP £</option><option value="JPY">JPY ¥</option>
+    </select>
+    <button id="lang" type="button">한국어</button>
+  </div>
+</header>
+
+<main>
+  <section class="card">
+    <h2 data-i18n="unit">Unit economics</h2>
+    <label class="full"><span data-i18n="preset">Platform preset</span>
+      <select id="preset">
+        <option value="custom" data-i18n="custom">Custom</option>
+        <option value="shopify_basic">Shopify Payments (2.9% + 0.30)</option>
+        <option value="shopify_external_gateway">Shopify + external gateway (+2%)</option>
+        <option value="amazon_fba_15">Amazon referral 15%</option>
+        <option value="etsy">Etsy (6.5% + 3% + 0.25)</option>
+        <option value="ebay">eBay (13.25% + 0.40)</option>
+        <option value="tiktok_shop">TikTok Shop 6%</option>
+        <option value="naver_smartstore">Naver SmartStore (~5.63%)</option>
+        <option value="coupang">Coupang marketplace 10.8%</option>
+      </select>
+      <small data-i18n="presetNote">Presets are typical published rates. Check your own plan and category.</small>
+    </label>
+    <div class="grid" id="inputs"></div>
+  </section>
+
+  <section class="card results">
+    <h2 data-i18n="results">Results per order</h2>
+    <div class="kpis">
+      <div class="kpi"><span data-i18n="netProfit">Net profit</span><b id="k-profit">–</b></div>
+      <div class="kpi"><span data-i18n="margin">Net margin</span><b id="k-margin">–</b></div>
+      <div class="kpi"><span data-i18n="beRoas">Break-even ROAS</span><b id="k-beroas">–</b></div>
+      <div class="kpi"><span data-i18n="beCpa">Break-even CPA</span><b id="k-becpa">–</b></div>
+    </div>
+    <table class="breakdown" id="breakdown"></table>
+    <p class="hint" id="target-line"></p>
+  </section>
+
+  <section class="card">
+    <h2 data-i18n="scenarios">Ad spend scenarios</h2>
+    <div class="row">
+      <label><span data-i18n="adBudget">Ad budget</span><input id="ad-budget" type="number" value="1000" min="0" step="any"></label>
+      <label class="grow"><span data-i18n="roasList">ROAS values (comma separated)</span><input id="roas-list" value="1, 1.5, 2, 2.5, 3, 4, 5"></label>
+    </div>
+    <div class="scroll"><table class="data" id="scenarios"></table></div>
+  </section>
+
+  <section class="card">
+    <h2 data-i18n="bulk">Bulk SKU calculator</h2>
+    <p class="hint" data-i18n="bulkHint">Paste CSV with a header row or load a file. Columns you leave out use the values above.</p>
+    <textarea id="bulk-input" rows="6" spellcheck="false">sku,price,cogs,shipping
+TEE-BLK,29,8.5,4.2
+HOODIE-GRY,59,21,6.5
+MUG-WHT,18,4.1,5.9</textarea>
+    <div class="row">
+      <input type="file" id="bulk-file" accept=".csv,text/csv">
+      <button id="bulk-run" type="button" data-i18n="calc">Calculate</button>
+      <button id="bulk-export" type="button" class="secondary" data-i18n="export">Export CSV</button>
+      <button id="bulk-template" type="button" class="secondary" data-i18n="template">Download template</button>
+    </div>
+    <div class="scroll"><table class="data" id="bulk-table"></table></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span data-i18n="privacy">Everything runs in your browser. Nothing is uploaded.</span>
+  <a id="buy-link" href="#" target="_blank" rel="noopener" data-i18n="buy">Get the Seller Kit</a>
+</footer>
+
+<script src="config.js"></script>
+<script src="calc.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

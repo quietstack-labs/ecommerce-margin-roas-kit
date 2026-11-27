@@ -1,0 +1,9 @@
+{
+  "name": "ecommerce-margin-roas-kit",
+  "version": "1.0.0",
+  "description": "Zero-dependency e-commerce profit, margin and break-even ROAS calculator.",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "private": true,
+  "scripts": { "test": "node --test test/*.test.js" },
+  "engines": { "node": ">=18" }
+}
