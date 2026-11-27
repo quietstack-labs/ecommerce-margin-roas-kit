@@ -7,7 +7,7 @@ and use it inside paid client services.
 Under either license you may not resell, sublicense or redistribute the source code itself, or a
 template or kit built mainly from it, as a standalone product.
 
-The public demo at https://alborotar.github.io/ecommerce-margin-roas-kit/ is free to use.
+The public demo at https://quietstack-labs.github.io/ecommerce-margin-roas-kit/ is free to use.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. Fee presets are estimates; verify
 them against your platform's current pricing. This is not financial or tax advice.
