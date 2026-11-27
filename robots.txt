@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://quietstack-labs.github.io/ecommerce-margin-roas-kit/sitemap.xml
