@@ -1,5 +1,8 @@
 # Margin & ROAS Kit
 
+💼 **Get the full kit:** [E-Commerce Profit, Margin & Break-Even ROAS Kit ($15)](https://playmaster72.gumroad.com/l/ecommerce-margin-roas-kit) — spreadsheet templates, pricing playbook and commercial license.
+
+
 A profit calculator for e-commerce sellers and the marketers who run their ads. It works for Shopify, Amazon, Etsy, eBay, TikTok Shop, Naver SmartStore, Coupang and your own DTC store. It runs in the browser, needs no install, and sends nothing anywhere.
 
 **Live demo:** https://quietstack-labs.github.io/ecommerce-margin-roas-kit/
